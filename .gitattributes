@@ -1,2 +1,5 @@
 # Skrip shell harus selalu LF, kalau tidak gagal jalan di Windows (autocrlf).
 *.sh text eol=lf
+
+# Skrip pemasang hook tidak dihitung dalam statistik bahasa GitHub.
+scripts/* linguist-vendored
