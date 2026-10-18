@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DominoArchive SaaS ✕ Company Brain - Modern Retro UI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="desktop-wrapper">
+    
+    <!-- Main Outer Window -->
+    <div class="window-container border-3d-outset">
+      
+      <!-- Top Title Bar -->
+      <header class="title-bar">
+        <div class="title-bar-left">
+          <div class="title-bar-logo" onclick="window.location.reload();" title="Praim Enterprise - Reload System">
+            <img src="praim-logo-white-transparent.png" alt="Praim Enterprise Logo" class="title-bar-logo-img">
+            <div class="title-bar-divider"></div>
+            <span class="product-title">DominoArchive <span class="product-subtitle">SaaS ✕ Company Brain</span></span>
+          </div>
+          <nav class="retro-menus">
+            <span class="menu-item">File</span>
+            <span class="menu-item">Edit</span>
+            <span class="menu-item">View</span>
+            <span class="menu-item">Help</span>
+          </nav>
+        </div>
+        
+        <div class="title-bar-right">
+          <!-- AI Global Search Bar -->
+          <div class="ai-search-container">
+            <input type="text" class="ai-search-input" placeholder="AI Global Search...">
+            <i class="material-icons">search</i>
+          </div>
+          
+          <!-- Modern Icons -->
+          <div class="header-actions">
+            <button class="header-btn" title="Settings">
+              <i class="material-icons">settings</i>
+            </button>
+            <button class="header-btn" title="Account">
+              <i class="material-icons">account_circle</i>
+            </button>
+          </div>
+        </div>
+      </header>
+      
+      <!-- Workspace Database Tabs -->
+      <div class="tabs-strip">
+        <div class="workspace-tab active" data-tab="mail-2005">
+          <i class="material-icons">mail</i>
+          <span>Mail_2005 📥</span>
+        </div>
+        <div class="workspace-tab inactive" data-tab="legal-docs">
+          <i class="material-icons">lock</i>
+          <span>Legal_Docs 🔒</span>
+        </div>
+        <div class="workspace-tab inactive" data-tab="finance-audit">
+          <i class="material-icons">monetization_on</i>
+          <span>Finance_Audit 💰</span>
+        </div>
+      </div>
+      
+      <!-- Main Content Area split in 3 Columns -->
+      <div class="main-viewport">
+        
+        <!-- Left Sidebar: Directory Navigation -->
+        <aside class="left-sidebar border-3d-outset">
+          <div class="sidebar-title-section">
+            <h3>DIRECTORY</h3>
+            <span>VFS-01-BRAIN</span>
+          </div>
+          
+          <ul class="nav-list">
+            <li class="nav-item" data-folder="root">
+              <i class="material-icons">folder_open</i>
+              <span>Root</span>
+            </li>
+            <li class="nav-item active" data-folder="inbox">
+              <i class="material-icons">inbox</i>
+              <span>Inbox (5)</span>
+            </li>
+            <li class="nav-item" data-folder="sent">
+              <i class="material-icons">send</i>
+              <span>Sent</span>
+            </li>
+            <li class="nav-item" data-folder="archive-legal" id="nav-archive-legal">
+              <i class="material-icons">folder_special</i>
+              <span>Archive Legal</span>
+            </li>
+            <li class="nav-item" data-folder="documents">
+              <i class="material-icons">description</i>
+              <span>Documents</span>
+            </li>
+            <li class="nav-item" data-folder="archives">
+              <i class="material-icons">inventory_2</i>
+              <span>Archives</span>
+            </li>
+          </ul>
+          
+          <div class="sidebar-footer">
+            <div class="nav-item" data-action="support">
+              <i class="material-icons" style="color: #64748B;">help</i>
+              <span>Support</span>
+            </div>
+            <div class="nav-item" data-action="logs">
+              <i class="material-icons" style="color: #64748B;">history</i>
+              <span>Logs</span>
+            </div>
+          </div>
+        </aside>
+        
+        <!-- Middle Panel: Explorer & Preview -->
+        <section class="middle-content">
+          
+          <!-- Middle-Top: Document List Grid -->
+          <div class="document-grid-container border-3d-inset">
+            <div class="grid-header">
+              <div class="grid-col-header">DATE</div>
+              <div class="grid-col-header">SENDER</div>
+              <div class="grid-col-header">SUBJECT</div>
+            </div>
+            
+            <div class="grid-rows-scroll" id="document-list-rows">
+              <!-- Row 1 (Active) -->
+              <div class="grid-row selected" data-doc-id="doc-99812">
+                <div class="grid-cell">2005-09-12</div>
+                <div class="grid-cell">compliance@domino.corp</div>
+                <div class="grid-cell">Q3 Compliance Update</div>
+              </div>
+              
+              <!-- Row 2 -->
+              <div class="grid-row" data-doc-id="doc-99810">
+                <div class="grid-cell">2005-09-10</div>
+                <div class="grid-cell">it-ops-central</div>
+                <div class="grid-cell">Server Migration Schedule</div>
+              </div>
+              
+              <!-- Row 3 -->
+              <div class="grid-row" data-doc-id="doc-99808">
+                <div class="grid-cell">2005-09-08</div>
+                <div class="grid-cell">archivist-prime</div>
+                <div class="grid-cell">Project Domino Kickoff</div>
+              </div>
+              
+              <!-- Row 4 -->
+              <div class="grid-row" data-doc-id="doc-99805">
+                <div class="grid-cell">2005-09-05</div>
+                <div class="grid-cell">hr-no-reply</div>
+                <div class="grid-cell">System Access Protocols</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Middle-Bottom: Split View Document Viewer -->
+          <div class="document-preview-container border-3d-inset" id="doc-preview-panel">
+            <div class="preview-toolbar">
+              <span class="preview-doc-title" id="preview-doc-title-text">Document View: Formal Letter: System Integrity</span>
+              <button class="btn-export border-3d-outset" id="export-pdf-btn">
+                <i class="material-icons" style="font-size: 14px;">download</i>
+                <span>Certified PDF/A Export</span>
+              </button>
+            </div>
+            
+            <div class="preview-content-scroll" id="preview-content-area">
+              <!-- Rendered Document -->
+              <div class="doc-header">
+                <h2 id="doc-title">Formal Letter: System Integrity</h2>
+                <div class="doc-ref-id" id="doc-ref-id">Ref ID: DOM-2005-99812</div>
+              </div>
+              
+              <div class="doc-body-text" id="doc-body-text">
+                To the System Administrator,<br><br>
+                This correspondence serves as formal verification of the financial audit parameters established for the current fiscal quarter. Our internal archives indicate a shift in retention policy regarding the following ledger entries. Please verify the entries in the table below for immediate compliance clearance.
+              </div>
+              
+              <!-- Spreadsheet Table -->
+              <div class="spreadsheet-container" id="doc-spreadsheet-container">
+                <table class="spreadsheet-table">
+                  <thead>
+                    <tr>
+                      <th>AUDIT ID</th>
+                      <th>CATEGORY</th>
+                      <th>STATUS</th>
+                      <th>VALUE (USD)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>3288</td>
+                      <td>Hardware Ops</td>
+                      <td><span class="status-badge status-verified">Verified</span></td>
+                      <td>$4,200.00</td>
+                    </tr>
+                    <tr id="row-4921">
+                      <td>4921</td>
+                      <td>Financial Audit</td>
+                      <td><span class="status-badge status-action">Action Required</span></td>
+                      <td>$158,920.00</td>
+                    </tr>
+                    <tr>
+                      <td>5102</td>
+                      <td>Legacy Data</td>
+                      <td><span class="status-badge status-archived">Archived</span></td>
+                      <td>$12,450.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Right Sidebar: AI Compliance Chat (Glassmorphism) -->
+        <aside class="ai-sidebar">
+          
+          <div class="ai-sidebar-header">
+            <div class="ai-header-title">
+              <div class="ai-icon-pulse">
+                <i class="material-icons">psychology</i>
+              </div>
+              <div class="ai-title-text">
+                <h4>COMPLIANCE AI</h4>
+                <div class="ai-title-status">
+                  <span class="status-dot"></span>
+                  <span>MONITORING ACTIVE</span>
+                </div>
+              </div>
+            </div>
+            <button class="header-btn" style="background: transparent; color: var(--color-modern-text-light);" title="Close Agent">
+              <i class="material-icons" style="font-size: 20px;">close</i>
+            </button>
+          </div>
+          
+          <!-- Scrolling Chat Feed -->
+          <div class="chat-history-scroll" id="ai-chat-history">
+            
+            <!-- Message 1 (User) -->
+            <div class="chat-bubble user">
+              <span class="message-sender">System Operator</span>
+              <p>Can you analyze Financial Audit ID 4921? It's showing an 'Action Required' flag in the legacy letter.</p>
+            </div>
+            
+            <!-- Message 2 (AI with Interactive Citation Link) -->
+            <div class="chat-bubble ai">
+              <span class="message-sender">AI Compliance Officer</span>
+              <p>Analysis complete. Audit ID 4921 refers to a missing retention certification from September 2005. Under the current DominoArchive Protocol, this must be re-digitized and signed by the Senior Archivist to avoid systemic compliance failure.</p>
+              
+              <!-- INTERACTIVE LINK -->
+              <span class="citation-link" id="citation-4921">
+                <i class="material-icons">gps_fixed</i>
+                <span>ID-4921-REF</span>
+              </span>
+            </div>
+            
+            <!-- Message 3 (User) -->
+            <div class="chat-bubble user">
+              <span class="message-sender">System Operator</span>
+              <p>Initiate the re-digitization process. Archive the finding in the primary legal vault.</p>
+            </div>
+            
+          </div>
+          
+          <!-- Input Area -->
+          <div class="chat-input-area">
+            <div class="chat-textbox-container">
+              <input type="text" class="chat-input-field" placeholder="Ask AI Compliance Officer..." id="chat-input-box">
+            </div>
+            <button class="btn-send" id="chat-send-btn" title="Send Instruction">
+              <i class="material-icons">send</i>
+            </button>
+          </div>
+          
+        </aside>
+        
+      </div>
+      
+    </div>
+    
+  </div>
+
+  <!-- Loading Overlay -->
+  <div id="loading-overlay" style="display:none; position: fixed; top:0; left:0; width:100vw; height:100vh; background: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center;">
+    <div class="border-3d-outset" style="background: var(--color-retro-bg); padding: 24px; display: flex; flex-direction: column; align-items: center; gap: 12px; font-weight:600;">
+      <i class="material-icons style-spin" style="font-size:36px; color:var(--color-modern-purple);">autorenew</i>
+      <span id="loading-message">Mengunduh Arsip Tersertifikasi PDF/A...</span>
+    </div>
+  </div>
+
+  <style>
+    .style-spin {
+      animation: spin 1s infinite linear;
+    }
+    @keyframes spin {
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+
+  <script src="app.js"></script>
+</body>
+</html>

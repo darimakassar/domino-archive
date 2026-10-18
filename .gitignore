@@ -1,0 +1,36 @@
+# Rahasia dan kredensial
+.env*
+*.nsf
+*.id
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Dump data dan cadangan
+*.sql.gz
+*.dump
+*.bak
+*.bundle
+_backup/
+
+# Dependensi dan hasil build
+node_modules/
+dist/
+build/
+.cache/
+
+# Berkas alat dan catatan lokal (jangan dipublikasikan)
+CLAUDE.md
+.claude/
+.codex/
+.serena/
+.graphify-tag
+graphify-out/
+*_Coding_Session_Transcript.md
+
+# OS dan IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

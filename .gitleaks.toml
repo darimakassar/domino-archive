@@ -1,0 +1,4 @@
+title = "domino-archive gitleaks config"
+
+[extend]
+useDefault = true
